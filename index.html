@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress Dashboard - Your Groovy Site</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200">
+    <!-- Admin Bar -->
+    <div class="w-full fixed top-0 left-0 right-0 z-50 bg-[#23282d] text-[#a0a5aa] flex items-center justify-between px-6 h-16 shadow-md text-lg">
+      <div class="flex items-center gap-6">
+        <div class="w-10 h-10 bg-[#00a0d2] rounded-full flex items-center justify-center font-bold text-white text-xl">W</div>
+        <a href="#" class="font-semibold text-white hover:text-[#00a0d2]">Your Groovy Site</a>
+        <a href="#" class="flex items-center gap-2 bg-[#0073aa] hover:bg-[#005a87] text-white px-4 py-2 rounded text-base font-medium transition"><i class="fa-solid fa-plus"></i>New</a>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="#" title="View Comments" class="hover:text-[#00a0d2] text-xl"></a><i class="fa-solid fa-glasses"></i></a>
+        <a href="#" title="Help" class="hover:text-[#00a0d2] text-xl"><i class="fa-solid fa-circle-question"></i></a>
+        <a href="#" title="Notifications" class="hover:text-[#00a0d2] text-xl"><i class="fa-solid fa-bell"></i></a>
+        <a href="#" class="user-menu font-medium hover:text-[#00a0d2]">Howdy, User <i class="fa-solid fa-user"></i></a>
+      </div>
+    </div>
+    <!-- Main Container -->
+    <div class="flex mt-16 min-h-[calc(100vh-4rem)]">
+      <!-- Sidebar -->
+      <div class="w-1/4 min-w-[200px] max-w-[400px] bg-[#23282d] text-[#a0a5aa] h-[calc(100vh-4rem)] fixed top-16 left-0 overflow-y-auto">
+        
+        <ul class="flex flex-col gap-2 mt-2">
+          <li class="nav-item active">
+            <a href="#" data-page="home" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-house"></i></span>
+              My Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-page="stats" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-chart-bar"></i></span>
+              Stats
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-page="upgrades" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-arrow-up"></i></span>
+              Upgrades
+              <span class="ml-auto bg-[#f56e28] text-white text-xs px-2 py-0.5 rounded font-semibold ml-2">Premium</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-page="mailboxes" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-envelope"></i></span>
+              My Mailboxes
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-page="posts" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-pen"></i></span>
+              Posts
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-page="media" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-photo-film"></i></span>
+              Media
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-page="pages" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-file"></i></span>
+              Pages
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-page="portfolio" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-briefcase"></i></span>
+              Portfolio
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-page="testimonials" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-comment-dots"></i></span>
+              Testimonials
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-page="comments" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-comments"></i></span>
+              Comments
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-page="feedback" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-bullhorn"></i></span>
+              Feedback
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-page="jetpack" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-rocket"></i></span>
+              Jetpack
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-page="woocommerce" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-cart-shopping"></i></span>
+              WooCommerce
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-page="appearance" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-palette"></i></span>
+              Appearance
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-page="plugins" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-plug"></i></span>
+              Plugins
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" data-page="users" class="flex items-center px-4 py-2 text-xl hover:bg-[#32373c] hover:text-[#00a0d2] rounded transition">
+              <span class="w-8 h-8 flex items-center justify-center text-2xl opacity-80 mr-3"><i class="fa-solid fa-users"></i></span>
+              Users
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- Main Content -->
+      <div class="flex-1 ml-[25%] p-6 text-xl">
+        <h1 class="main-title text-4xl font-bold text-[#1d2327] mb-4">General Settings</h1>
+        <p class="main-subtitle text-[#646970] text-lg mb-8">Manage your site settings, including language, time zone, site visibility, and more.</p>
+        <h2 class="text-xl font-bold mb-2">Site profile</h2>
+        <div class="bg-gray-200  shadow-sm p-0 mb-5 rounded">
+          <div class="flex items-start p-4 ">
+            <div class="w-52 font-semibold pr-5 flex items-center gap-2">Site title</div>
+            <div class="flex-1"><input type="text"  class="w-full max-w-md p-2 bg-gray-100 border border-[#8c8f94] rounded" /></div>
+          </div>
+          <div class="flex items-start p-4">
+            <div class="w-52 font-semibold pr-5 flex items-center gap-2">Site tagline</div>
+            <div class="flex-1">
+              <input type="text"  class="w-full max-w-md p-2 bg-gray-100 border border-[#8c8f94] rounded" />
+              <p class="text-[#646970] text-xs mt-1">In a few words, explain what this site is about.</p>
+            </div>
+          </div>
+          <div class="flex items-start p-4 ">
+            <div class="w-52 font-semibold pr-5">Site icon</div>
+            <div class="flex-1">
+              <input type="file" class="w-full max-w-md p-2 bg-gray-100 border border-[#8c8f94] rounded" />
+              <p class="text-[#646970] text-xl mt-1">The Site Icon is what you see in browser tabs, bookmark bars, and within the WordPress mobile apps. It should <br> be square and at least 512 x 512 pixels.</p>
+            </div>
+          </div>
+          <div class="flex items-start p-4 ">
+            <div class="w-52 font-semibold pr-5">Site language <i class="fa-solid fa-language"></i></div>
+            
+            <div class="flex-1">
+              <select class="w-full max-w-md p-2 bg-gray-100 border border-[#8c8f94] rounded">
+                <option value="en" selected>English</option>
+                <option value="hi">Hindi</option>
+                <option value="gu">Gujarati</option>
+                <option value="es">Spanish</option>
+                <option value="fr">French</option>
+                <option value="de">German</option>
+                <option value="zh">Chinese</option>
+                <option value="ar">Arabic</option>
+                <option value="ru">Russian</option>
+                <option value="ja">Japanese</option>
+              </select>
+            </div>
+          </div>
+        </div>
+          <div class="flex items-start p-4 ">
+            <div class="w-52 font-semibold pr-5">Time zone </div>
+            <div class="flex-1">
+              <select class="w-full max-w-md p-2 bg-gray-100 border border-[#8c8f94] rounded">
+                <option value="UTC" selected>UTC</option>
+                <option value="Asia/Kolkata">Kolkata</option>
+                <option value="Asia/Dubai">Dubai</option>
+                <option value="America/New_York">New York</option>
+                <option value="America/Chicago">Chicago</option>
+                <option value="America/Denver">Denver</option>
+                <option value="America/Los_Angeles">Los Angeles</option>
+                <option value="Europe/London">London</option>
+                <option value="Europe/Berlin">Berlin</option>
+                <option value="Europe/Paris">Paris</option>
+                <option value="Europe/Moscow">Moscow</option>
+                <option value="Asia/Tokyo">Tokyo</option>
+                <option value="Asia/Shanghai">Shanghai</option>
+                <option value="Australia/Sydney">Sydney</option>
+                <option value="Africa/Johannesburg">Johannesburg</option>
+                <option value="America/Sao_Paulo">Sao Paulo</option>
+                <option value="Pacific/Auckland">Auckland</option>
+              </select>
+              <p class="text-[#646970] text-xl mt-1">Choose a city in your time zone.</p>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+    
+</body>
+</html>
